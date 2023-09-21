@@ -32,7 +32,7 @@ fetch("http://localhost:8080/api/estoque/produtos").then((data)=>{
                   <td>${values.nome}</td> 
                   <td>${values.marca}</td> 
                   <td>${values.quantidade} </td>
-                  <td>${values.valorUnitario}</td> 
+                  <td>R$ ${values.valorUnitario}</td> 
               </tr>
           </tbody>
           `
@@ -41,9 +41,11 @@ fetch("http://localhost:8080/api/estoque/produtos").then((data)=>{
       console.log(todosProdutos);
   })
 
-  const produtoId = document.getElementById(produtoId).value;
+  
 
-  function buscarProduto(){
+  /*function buscarProduto(){
+    const produtoId = document.getElementById("produtoId").value;
+
   fetch("http://localhost:8080/api/estoque/produtos/${produtoId}",{
     method:'GET',
     headers: {
@@ -51,10 +53,10 @@ fetch("http://localhost:8080/api/estoque/produtos").then((data)=>{
     }
   })
   .then(response => response.json())
-  .then(data => {
+  .then((data) => {
     const resultadoDiv = document.getElementById("resultado");
     resultadoDiv.innerHTML = `
-    <h2>Produto encontrado</h2>
+    <h4>Produto encontrado</h4>
     <p>Id: ${data.id}</p>
     <p>Nome: ${data.nome}</p>
     <p>Quantidade: ${data.quantidade}</p>
@@ -65,4 +67,4 @@ fetch("http://localhost:8080/api/estoque/produtos").then((data)=>{
     const resultadoDiv = document.getElementById("resultado");
     resultadoDiv.innerHTML= '<p>Produto não encontrado.</p>';
   });
-  }
+  }*/

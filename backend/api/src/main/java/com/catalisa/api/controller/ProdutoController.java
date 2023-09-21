@@ -24,7 +24,7 @@ public class ProdutoController {
         return ResponseEntity.ok(produtoService.listarTodos());
     }
 
-    @GetMapping(path = "/{id}")
+    @GetMapping(path = "/{produtoId}")
     @CrossOrigin(origins = "http://127.0.0.1:5500/")
     @ResponseStatus(HttpStatus.OK)
     public Optional<ProdutoModel> listarProdutoPorId(@PathVariable Long id){
